@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 function Footer() {
   return (
     <>
-    <div className='container-fluid'>
+    <div className='container-fluid py-4'>
         <div className="row">
             <div className="col-md-1"></div>
             <div className="col-md-3">
@@ -41,7 +41,8 @@ function Footer() {
         </div>
     </div>
 
-    <div>
+    <div className="container-fluid">
+        <h6 className="text-center mb-4 text-primary">@2026 JOBsearch . All rights reserved.</h6>
         
     </div>
     </>

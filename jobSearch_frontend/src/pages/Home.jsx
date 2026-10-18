@@ -1,4 +1,4 @@
-import Footer from '../components/Footer'
+
 import Job from '../components/Job'
 import './Home.css'
 
@@ -99,9 +99,6 @@ function Home() {
                </div>
             </div>
 
-            <div>
-                <Footer/>
-            </div>
 
 
 
