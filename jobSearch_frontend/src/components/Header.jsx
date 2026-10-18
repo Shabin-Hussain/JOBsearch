@@ -20,7 +20,7 @@ function Header() {
                 Tips and Advise
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">More Resources</NavDropdown.Item>
+              <NavDropdown.Item href="/resource">More Resources</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Frequently Asked Questions
