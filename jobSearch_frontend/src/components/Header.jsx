@@ -22,7 +22,7 @@ function Header() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="/resource">More Resources</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="/questions">
                 Frequently Asked Questions
               </NavDropdown.Item>
             </NavDropdown>
@@ -38,15 +38,15 @@ function Header() {
             </NavDropdown>
 
              <NavDropdown title="About" id="basic-nav-dropdown" className='ms-md-2'>
-              <NavDropdown.Item href="#action/3.1">About Us</NavDropdown.Item>
+              <NavDropdown.Item href="/about">About Us</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="/mission">
                 Our Mission
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">Contact Us</NavDropdown.Item>
+              <NavDropdown.Item href="/contact">Contact Us</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="/what">
                 What's Going On
               </NavDropdown.Item>
             </NavDropdown>
