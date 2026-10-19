@@ -12,6 +12,9 @@ import About from './pages/About'
 import Mission from './pages/Mission'
 import Contact from './pages/Contact'
 import What from './pages/What'
+import Choose from './pages/Choose'
+import Emplogin from './pages/Emplogin'
+import Joblogin from './pages/Joblogin'
 
 function App() {
 
@@ -29,6 +32,9 @@ function App() {
       <Route path='/mission' element={<Mission/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/what' element={<What/>}/>
+      <Route path='/choose' element={<Choose/>}/>
+      <Route path='/emplogin' element={<Emplogin/>}/>
+       <Route path='/joblogin' element={<Joblogin/>}/>
      </Routes>
      <Footer/>
     </>

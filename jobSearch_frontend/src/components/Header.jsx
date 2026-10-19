@@ -54,7 +54,7 @@ function Header() {
            
           </Nav>
 
-           <button className='btn btn-primary rounded'>Login/Register</button>
+           <Link to={'/choose'}  className='btn btn-primary rounded'>Login/Register</Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>

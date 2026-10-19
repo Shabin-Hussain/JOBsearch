@@ -14,21 +14,21 @@ function Footer() {
             </div>
             <div className="col-md-2 ">
                 <h5>Jobsearch</h5>
-                <h6><a href="" style={{textDecoration:'none'}}>About Us</a></h6>
-                <h6><a href="" style={{textDecoration:'none'}}>Our Mission</a></h6>
-                <h6><a href="" style={{textDecoration:'none'}}>Contact Us</a></h6>
-                <h6><a href="" style={{textDecoration:'none'}}>Search Jobs</a></h6>
-                <h6><a href="" style={{textDecoration:'none'}}>What's Going On</a></h6>
-                <h6><a href="" style={{textDecoration:'none'}}>Tips and Advice</a></h6>
+                <h6><a href="/about" style={{textDecoration:'none'}}>About Us</a></h6>
+                <h6><a href="/mission" style={{textDecoration:'none'}}>Our Mission</a></h6>
+                <h6><a href="/contact" style={{textDecoration:'none'}}>Contact Us</a></h6>
+                <h6><a href="/search" style={{textDecoration:'none'}}>Search Jobs</a></h6>
+                <h6><a href="/what" style={{textDecoration:'none'}}>What's Going On</a></h6>
+                <h6><a href="/tips" style={{textDecoration:'none'}}>Tips and Advice</a></h6>
                  
                 
             </div>
             <div className="col-md-2">
                  <h5>Follow Us</h5>
-                 <h6><a href="" style={{textDecoration:'none'}}><FontAwesomeIcon icon={faFacebook} size="xl"/>Facebook</a></h6>
-                <h6><a href="" style={{textDecoration:'none'}}><FontAwesomeIcon icon={faInstagram} size="xl"/>Instagram</a></h6>
-                <h6><a href="" style={{textDecoration:'none'}}><FontAwesomeIcon icon={faLinkedin} size="xl" />LinkedIn</a></h6>
-                <h6><a href="" style={{textDecoration:'none'}}><FontAwesomeIcon icon={faSquareXTwitter} size="xl"/>X</a></h6>
+                 <h6><a href="https://www.facebook.com" target="_blank" style={{textDecoration:'none'}}><FontAwesomeIcon icon={faFacebook} size="xl"/>Facebook</a></h6>
+                <h6><a href="https://www.instagram.com" target="_blank" style={{textDecoration:'none'}}><FontAwesomeIcon icon={faInstagram} size="xl"/>Instagram</a></h6>
+                <h6><a href="https://www.linkedin.com" target="_blank" style={{textDecoration:'none'}}><FontAwesomeIcon icon={faLinkedin} size="xl" />LinkedIn</a></h6>
+                <h6><a href="https://x.com" target="_blank" style={{textDecoration:'none'}}><FontAwesomeIcon icon={faSquareXTwitter} size="xl"/>X</a></h6>
             </div>
             <div className="col-md-3">
                  <h5>Send Us a Message</h5>
