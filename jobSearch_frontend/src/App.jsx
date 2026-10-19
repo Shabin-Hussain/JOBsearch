@@ -15,6 +15,9 @@ import What from './pages/What'
 import Choose from './pages/Choose'
 import Emplogin from './pages/Emplogin'
 import Joblogin from './pages/Joblogin'
+import Empreg from './pages/Empreg'
+import Jobreg from './pages/Jobreg'
+import Post from './pages/Post'
 
 function App() {
 
@@ -34,7 +37,10 @@ function App() {
       <Route path='/what' element={<What/>}/>
       <Route path='/choose' element={<Choose/>}/>
       <Route path='/emplogin' element={<Emplogin/>}/>
-       <Route path='/joblogin' element={<Joblogin/>}/>
+      <Route path='/joblogin' element={<Joblogin/>}/>
+      <Route path='/empreg' element={<Empreg/>}/>
+      <Route path='/jobreg' element={<Jobreg/>}/>
+      <Route path='/post' element={<Post/>}/>
      </Routes>
      <Footer/>
     </>

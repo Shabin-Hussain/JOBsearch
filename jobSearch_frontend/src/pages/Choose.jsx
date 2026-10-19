@@ -19,7 +19,7 @@ function Choose() {
                       <img src="/employer.png" alt="" width={'100%'}/>
                       <Link to={'/emplogin'} className='btn btn-primary mt-3 rounded' style={{width:'100%'}}>Login</Link>
                       <p className='text-center mt-1'>or</p>
-                      <Link className='btn btn-primary rounded' style={{width:'100%'}}>Register</Link>
+                      <Link to={'/empreg'} className='btn btn-primary rounded' style={{width:'100%'}}>Register</Link>
                    </div>
                 </Col>
                 <Col sm={12} md={6}>
@@ -28,7 +28,7 @@ function Choose() {
                      <img src="/jobseeker.png" alt="" width={'100%'}/>
                       <Link to={'/joblogin'} className='btn btn-primary mt-3 rounded' style={{width:'100%'}}>Login</Link>
                       <p className='text-center mt-1'>or</p>
-                      <Link className='btn btn-primary rounded' style={{width:'100%'}}>Register</Link>
+                      <Link to={'/jobreg'} className='btn btn-primary rounded' style={{width:'100%'}}>Register</Link>
                    </div>
                 </Col>
             </Row>

@@ -1,6 +1,8 @@
 
+import { Link } from 'react-router-dom'
 import Job from '../components/Job'
 import './Home.css'
+
 
 
 function Home() {
@@ -29,7 +31,7 @@ function Home() {
                         <div className="col-md-4"></div>
                         <div className="col-md-4">
                             <h5 className='text-white'>Search Job</h5>
-                            <button className='btn btn-dark rounded' >Search</button>
+                            <Link  className='btn btn-dark rounded'to={'/search'} >Search</Link>
                         </div>
                         <div className="col-md-4"></div>
 
