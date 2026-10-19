@@ -18,6 +18,7 @@ import Joblogin from './pages/Joblogin'
 import Empreg from './pages/Empreg'
 import Jobreg from './pages/Jobreg'
 import Post from './pages/Post'
+import Applied from './pages/Applied'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
       <Route path='/empreg' element={<Empreg/>}/>
       <Route path='/jobreg' element={<Jobreg/>}/>
       <Route path='/post' element={<Post/>}/>
+      <Route path='/applied' element={<Applied/>}/>
      </Routes>
      <Footer/>
     </>
