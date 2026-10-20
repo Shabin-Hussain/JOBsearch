@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../components/Header'
+
 
 function Tips() {
     return (
         <>
+         <Header/>
             <div className='container-fluid'>
                 <h2 className='text-center my-5 text-primary'>Tips and Advice</h2>
                 <div className="row mb-5">

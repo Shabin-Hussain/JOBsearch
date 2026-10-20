@@ -1,9 +1,12 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import Header from '../components/Header'
+
 
 function Joblogin() {
   return (
    <>
+    <Header/>
     <h2 className='text-center text-primary mt-5'>Careerseeker Login</h2>
     <div className='container-fluid'>
         <Row>

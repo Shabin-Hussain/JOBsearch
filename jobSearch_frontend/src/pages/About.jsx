@@ -1,9 +1,12 @@
 import React from 'react'
 import './About.css'
+import Header from '../components/Header'
+
 
 function About() {
   return (
     <>
+    <Header/>
     <div className='container-fluid'>
        <div className='row'>
             <div className="col-md-7 p-4 text-center">

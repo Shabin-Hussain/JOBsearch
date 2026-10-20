@@ -2,12 +2,15 @@ import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import Header from './Header'
 
 
 
 function Post() {
   return (
     <>
+
+     {/* <Header/> */}
      
       <div className='container-fluid'>
         <Row>

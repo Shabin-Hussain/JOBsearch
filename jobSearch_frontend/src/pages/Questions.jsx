@@ -1,9 +1,12 @@
 import Accordion from 'react-bootstrap/Accordion';
+import Header from '../components/Header'
+
 
 
 function Questions() {
     return (
         <>
+         <Header/>
             <h2 className='text-center my-5'>Frequently Asked Questions </h2>
 
             <div className="row">

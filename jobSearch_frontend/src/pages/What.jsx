@@ -2,6 +2,7 @@ import { faBriefcase, faCircleCheck, faLightbulb, faNewspaper, faPeopleGroup } f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import Header from '../components/Header'
 
 
 
@@ -9,6 +10,7 @@ import { Col, Row } from 'react-bootstrap'
 function What() {
   return (
     <>
+     <Header/>
     <h2 className='text-center mt-5'>What's going on?</h2>
     <Row className='p-5 mb-2 '>
         <Col sm={12} md={4}>

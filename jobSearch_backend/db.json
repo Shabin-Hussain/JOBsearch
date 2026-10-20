@@ -1,6 +1,55 @@
 {
-    "jobs":[],
-    "employers":[]
-
-    
+  "jobs": [],
+  "employers": [
+    {
+      "cname": "vv",
+      "employees": "vdsvdv",
+      "name": "vdsvds",
+      "phone": "vvsv",
+      "email": "vdvdv",
+      "username": "dvdvv",
+      "password": "v",
+      "id": 1
+    },
+    {
+      "cname": "Tcs",
+      "employees": "1451",
+      "name": "tata",
+      "phone": "4512859626",
+      "email": "tcs@gmail.com",
+      "username": "tcs",
+      "password": "tcs123",
+      "id": 2
+    },
+    {
+      "cname": "adani",
+      "employees": "45112",
+      "name": "adani",
+      "phone": "4541215455",
+      "email": "adani@gmail.com",
+      "username": "adani",
+      "password": "adani123",
+      "id": 3
+    },
+    {
+      "cname": "power",
+      "employees": "po",
+      "name": "fddf",
+      "phone": "dssf",
+      "email": "fdf",
+      "username": "fdfd",
+      "password": "ffd",
+      "id": 4
+    },
+    {
+      "cname": "hgh",
+      "employees": "hg",
+      "name": "gt",
+      "phone": "hhh",
+      "email": "ghhg",
+      "username": "hgh",
+      "password": "hghg",
+      "id": 5
+    }
+  ]
 }

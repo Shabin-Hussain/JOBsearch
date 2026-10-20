@@ -2,12 +2,14 @@ import { faFacebook, faInstagram, faLinkedin, faSquareXTwitter } from '@fortawes
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import Header from '../components/Header'
 
 
 
 function Contact() {
   return (
     <>
+     <Header/>
     <div className="container-fluid">
         <div className="row">
             <div className="col-md-1">

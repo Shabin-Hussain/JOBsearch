@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../components/Header'
+
 
 function Resource() {
     return (
         <>
+         <Header/>
 
             <h4 className='text-primary text-center my-5'>More Resources</h4>
             <div className='container-fluid mb-5'>

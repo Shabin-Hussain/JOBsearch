@@ -1,12 +1,14 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Header from '../components/Header'
 
 
 
 function Choose() {
   return (
     <>
+     <Header/>
     <div className='container-fluid my-5'>
         <h2 className='text-primary text-center my-5'>Choose how to access the portal</h2>
        <div className="row">

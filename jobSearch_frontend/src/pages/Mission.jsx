@@ -1,9 +1,12 @@
 import React from 'react'
 import './Mission.css'
+import Header from '../components/Header'
+
 
 function Mission() {
   return (
     <>
+     <Header/>
     <div className='container-fluid my-5'>
          <div className="row">
              <div className="col-md-1"></div>

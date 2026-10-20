@@ -2,12 +2,16 @@
 import { Link } from 'react-router-dom'
 import Job from '../components/Job'
 import './Home.css'
+import Header from '../components/Header'
+
 
 
 
 function Home() {
     return (
         <>
+
+         <Header/>
 
 
             <div style={{ height: '100vh' }} className='bg-primary home'>

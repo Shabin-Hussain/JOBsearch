@@ -1,10 +1,12 @@
 import { faBuilding, faCalendarDays, faCalendarXmark, faLocationDot, faUserTie } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Header from '../components/Header'
 
 
 function Search() {
   return (
     <>
+     <Header/>
     <div className='container-fluid'>
         <div className="row my-5">
             <div className="col-md-1"></div>

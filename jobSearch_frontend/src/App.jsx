@@ -17,7 +17,7 @@ import Emplogin from './pages/Emplogin'
 import Joblogin from './pages/Joblogin'
 import Empreg from './pages/Empreg'
 import Jobreg from './pages/Jobreg'
-import Post from './pages/Post'
+import Post from './components/Post'
 import Applied from './pages/Applied'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-     <Header/>
+     
      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/search' element={<Search/>}/>
