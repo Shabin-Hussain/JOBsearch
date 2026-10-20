@@ -106,7 +106,7 @@ function Emplogin() {
         </Container>
       </Navbar>
 
-      <Post/>
+      <Post user3={employeelogin.username}/>
      </div>
 
     

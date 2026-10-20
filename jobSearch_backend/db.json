@@ -1,5 +1,19 @@
 {
-  "jobs": [],
+  "jobs": [
+    {
+      "cname": "fdsafdsafdf",
+      "jobtitle": "dfdsfdf",
+      "city": "dfff",
+      "address": "ffdfdf",
+      "jobtype": "dsffdf",
+      "pay": "dfdfdf",
+      "lastdate": "dfdsf",
+      "username": "adani",
+      "posteddate": "fdd",
+      "description": "fdfd",
+      "id": 1
+    }
+  ],
   "employers": [
     {
       "cname": "vv",
