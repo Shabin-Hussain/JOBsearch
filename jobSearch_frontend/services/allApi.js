@@ -23,3 +23,34 @@ export const advertiseApi = async(reqBody)=>{
 export const postedApi = async()=>{
     return await commonApi('GET',`${serverUrl}/jobs`,"")
 }
+
+//delete posted job
+export const deletejobApi = async(id)=>{
+    return await commonApi('DELETE',`${serverUrl}/jobs/${id}`,{})
+
+}
+
+//api to register jobseeker account 
+export const jobseekerregApi = async (reqBody)=>{
+  return await commonApi('POST',`${serverUrl}/jobseekers`,reqBody,"")
+}
+
+//api to login jobseeker account
+export const jobseekerlogApi = async()=>{
+    return await commonApi('GET',`${serverUrl}/jobseekers`,"")
+}
+
+//api to apply jobs(to store applied job to server)
+//1
+export const appliedjobsApi = async(reqBody) =>{
+   return await commonApi('POST',`${serverUrl}/appliedjobs`,reqBody,"")
+}
+
+
+
+//api to show applied jobs 
+//1
+export const showappliedApi = async()=>{
+    return await commonApi('GET',`${serverUrl}/appliedjobs`,"")
+}
+

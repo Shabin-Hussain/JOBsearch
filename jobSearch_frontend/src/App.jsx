@@ -18,7 +18,7 @@ import Joblogin from './pages/Joblogin'
 import Empreg from './pages/Empreg'
 import Jobreg from './pages/Jobreg'
 import Post from './components/Post'
-import Applied from './pages/Applied'
+import Applied from './components/Applied'
 
 function App() {
 

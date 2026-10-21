@@ -5,7 +5,7 @@ import { Col, Row } from 'react-bootstrap'
 
 
 
-function Applied() {
+function Applied({jobs1,login,appliedJobs,appliedJobsList}) {
   return (
     <>
     <h2 className='text-center text-primary my-5'>Applied Jobs</h2>
@@ -28,15 +28,16 @@ function Applied() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td className='border-end'>Sharepoint Developer</td>
-                            <td className='border-end'>Tata Consultancy Services</td>
-                            <td className='border-end'>29, Kamaraj Rd, Red Fields, Coimbatore, Tamil Nadu 641018</td>
-                            <td className='border-end'>full time</td>
-                            <td className='border-end'>	25000-30000</td>
-                            <td className='border-end'>	2024-08-09</td>
-                            
+                        {appliedJobsList.map((item,index)=>(<tr  key={`${item.uname}-${item.jobId ?? item.id}-${index}`}>
+                            <td className='border-end'>{item.jobtitle}</td>
+                            <td className='border-end'>{item.cname}</td>
+                            <td className='border-end'>{item.address}</td>
+                            <td className='border-end'>{item.jobtype}</td>
+                            <td className='border-end'>{item.pay}</td>
+                            <td className='border-end'>	{item.lastdate}</td>
+                           
                         </tr>
+                         ))}
                     </tbody>
                 </table>
            </div>
@@ -47,24 +48,28 @@ function Applied() {
         </Row>
 
         <Row className='p-4'>
-            <Col sm={12} md={4} lg={4}>
+            {jobs1?.length >0 ? jobs1.map((item)=>(<Col sm={12} md={4} lg={4} key={item.id} className='mt-2'>
             <div className='border rounded shadow p-4'>
                <div className='row'>
                     <div className="col-md-4">
                         <img src="/emp.png" alt="" width={'100px'}/>
                     </div>
                     <div className="col-md-8">
-                        <h5>Sharepoint Developer</h5>
-                        <h6 className='mt-1'><FontAwesomeIcon icon={faBriefcase} /><span style={{fontSize:'12px'}}>Company:</span> Tata Consultancy Services</h6>
-                         <h6 className='mt-1'><FontAwesomeIcon icon={faCalendarDays} /><span style={{fontSize:'12px'}}>Publish on:</span> Tata Consultancy Services</h6>
-                          <h6 className='mt-1'><FontAwesomeIcon icon={faLocationDot} />29, Kamaraj Rd, Red Fields, Coimbatore, Tamil Nadu 641018</h6>
-                           <h6 className='mt-1'><FontAwesomeIcon icon={faCalendarXmark} /><span style={{fontSize:'12px'}}>Closing on:</span> 2024-08-09</h6>
+                        <h5>{item.jobtitle}</h5>
+                        <h6 className='mt-1'><FontAwesomeIcon icon={faBriefcase} /><span style={{fontSize:'12px'}}>Company:</span>{item.cname} </h6>
+                         <h6 className='mt-1'><FontAwesomeIcon icon={faCalendarDays} /><span style={{fontSize:'12px'}}>Publish on:</span>{item.posteddate} </h6>
+                          <h6 className='mt-1'><FontAwesomeIcon icon={faLocationDot} />{item.address}</h6>
+                           <h6 className='mt-1'><FontAwesomeIcon icon={faCalendarXmark} /><span style={{fontSize:'12px'}}>Closing on:</span> {item.lastdate}</h6>
                         
+                    </div>
+                    <div className='d-flex aign-items-center justify-content-center'>
+                       <button /* onClick={()=>set(true)} */  onClick={() => appliedJobs(item.id)} className='btn btn-primary rounded px-4 mt-2'>Apply</button>
                     </div>
                </div>
 
             </div>
-            </Col>
+            </Col>)) : 
+            <p>No jobs to display</p>}
         </Row>
     </div>
     </>

@@ -1,17 +1,95 @@
 {
   "jobs": [
     {
-      "cname": "fdsafdsafdf",
-      "jobtitle": "dfdsfdf",
-      "city": "dfff",
-      "address": "ffdfdf",
-      "jobtype": "dsffdf",
-      "pay": "dfdfdf",
-      "lastdate": "dfdsf",
+      "cname": "Adani power",
+      "jobtitle": "Clerk",
+      "city": "kolkatta",
+      "address": "kolkatta, west bengal",
+      "jobtype": "full time",
+      "pay": "15000",
+      "lastdate": "05/10/2026",
       "username": "adani",
-      "posteddate": "fdd",
-      "description": "fdfd",
+      "posteddate": "05/05/2026",
+      "description": "This is a full time job",
       "id": 1
+    },
+    {
+      "cname": "Adani energy",
+      "jobtitle": "manager",
+      "city": "kochi",
+      "address": "kochi,kerala",
+      "jobtype": "full time",
+      "pay": "75000",
+      "lastdate": "05/11/2026",
+      "username": "adani",
+      "posteddate": "05/05/2026",
+      "description": "this is a full time job",
+      "id": 2
+    },
+    {
+      "cname": "tata",
+      "jobtitle": "clerk",
+      "city": "bengaluru",
+      "address": "bengalur,karnataka",
+      "jobtype": "part time",
+      "pay": "45000",
+      "lastdate": "05/12/2026",
+      "username": "tata",
+      "posteddate": "05/05/2026",
+      "description": "This is apart time job",
+      "id": 3
+    },
+    {
+      "cname": "tata elxi",
+      "jobtitle": "manager",
+      "city": "pune",
+      "address": "pune,maharashtra",
+      "jobtype": "full time",
+      "pay": "47854",
+      "lastdate": "15/12/2026",
+      "username": "tata",
+      "posteddate": "05/04/2024",
+      "description": "this is a god appurtunity",
+      "id": 4
+    },
+    {
+      "cname": "adani ltd",
+      "jobtitle": "teacher",
+      "city": "thane",
+      "address": "thane,maha",
+      "jobtype": "part",
+      "pay": "784512",
+      "lastdate": "08/12/2026",
+      "username": "adani",
+      "posteddate": "05/11/2025",
+      "description": "sddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "id": 5
+    },
+    {
+      "cname": "adani",
+      "jobtitle": "security",
+      "city": "merut",
+      "address": "merut,maha",
+      "jobtype": "full",
+      "pay": "9654",
+      "lastdate": "7/12/2026",
+      "username": "adani",
+      "posteddate": "04/11/2025",
+      "description": "dcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdc",
+      "id": 6
+    },
+    {
+      "cname": "ad",
+      "jobtitle": "support",
+      "city": "chennai",
+      "address": "chennai , tn",
+      "jobtype": "part",
+      "pay": "47845",
+      "lastdate": "08/12/2026",
+      "username": "adani",
+      "posteddate": "04/01/2025",
+      "description": "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn",
+      "id": 7
     }
   ],
   "employers": [
@@ -64,6 +142,105 @@
       "username": "hgh",
       "password": "hghg",
       "id": 5
+    },
+    {
+      "cname": "tcs",
+      "employees": "4512",
+      "name": "tata",
+      "phone": "45781245",
+      "email": "tata@gmail.com",
+      "username": "tata",
+      "password": "tata123",
+      "id": 6
+    }
+  ],
+  "jobseekers": [
+    {
+      "name": "paul",
+      "phone": "451278",
+      "email": "paul@gmail.com",
+      "uname": "paul",
+      "pswd": "paul",
+      "id": 1
+    },
+    {
+      "name": "ammpu",
+      "phone": "hgfdfd",
+      "email": "h",
+      "uname": "ampu",
+      "pswd": "ampu",
+      "id": 2
+    }
+  ],
+  "appliedjobs": [
+    {
+      "cname": "ad",
+      "jobtitle": "support",
+      "city": "chennai",
+      "address": "chennai , tn",
+      "jobtype": "part",
+      "pay": "47845",
+      "lastdate": "08/12/2026",
+      "username": "adani",
+      "posteddate": "04/01/2025",
+      "description": "nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn",
+      "id": 7,
+      "uname": "paul",
+      "email": "paul@gmail.com",
+      "name": "paul",
+      "phone": "451278"
+    },
+    {
+      "cname": "Adani power",
+      "jobtitle": "Clerk",
+      "city": "kolkatta",
+      "address": "kolkatta, west bengal",
+      "jobtype": "full time",
+      "pay": "15000",
+      "lastdate": "05/10/2026",
+      "username": "adani",
+      "posteddate": "05/05/2026",
+      "description": "This is a full time job",
+      "id": 1,
+      "uname": "paul",
+      "email": "paul@gmail.com",
+      "name": "paul",
+      "phone": "451278"
+    },
+    {
+      "cname": "Adani energy",
+      "jobtitle": "manager",
+      "city": "kochi",
+      "address": "kochi,kerala",
+      "jobtype": "full time",
+      "pay": "75000",
+      "lastdate": "05/11/2026",
+      "username": "adani",
+      "posteddate": "05/05/2026",
+      "description": "this is a full time job",
+      "id": 2,
+      "uname": "paul",
+      "email": "paul@gmail.com",
+      "name": "paul",
+      "phone": "451278"
+    },
+    {
+      "cname": "Adani power",
+      "jobtitle": "Clerk",
+      "city": "kolkatta",
+      "address": "kolkatta, west bengal",
+      "jobtype": "full time",
+      "pay": "15000",
+      "lastdate": "05/10/2026",
+      "username": "adani",
+      "posteddate": "05/05/2026",
+      "description": "This is a full time job",
+      "uname": "ampu",
+      "email": "h",
+      "name": "ammpu",
+      "phone": "hgfdfd",
+      "jobId": 1,
+      "id": 8
     }
   ]
 }

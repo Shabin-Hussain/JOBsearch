@@ -3,11 +3,24 @@ import { Link } from 'react-router-dom'
 import Job from '../components/Job'
 import './Home.css'
 import Header from '../components/Header'
+import { useEffect, useState } from 'react'
+import { postedApi } from '../../services/allApi'
+
 
 
 
 
 function Home() {
+     const [jobs, setJobs] = useState([]);
+  const [visibleJobs, setVisibleJobs] = useState(6);
+
+  useEffect(() => {
+    const fetchPostedJobs = async () => {
+      const result = await postedApi();
+      setJobs(result.data);
+    };
+    fetchPostedJobs();
+  }, []);
     return (
         <>
 
@@ -49,7 +62,7 @@ function Home() {
             </div>
 
             <div className='p-5'>
-                <Job/>
+                <Job jobs={jobs} visibleJobs={visibleJobs}/>
             </div>
 
             <div className='container-fluid m-4'>

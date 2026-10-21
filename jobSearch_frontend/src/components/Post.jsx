@@ -1,14 +1,21 @@
 import { faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import Header from './Header'
-import { advertiseApi } from '../../services/allApi'
+import { advertiseApi, deletejobApi, postedApi, showappliedApi } from '../../services/allApi'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+
 
 
 
 
 function Post({ user3 }) {
+    const [res, setRes] = useState([])
+    const [showj, setShowJ] = useState(false)
+    const [clickid, setClickId] = useState("");
+    const [modalShow, setModalShow] = React.useState(false);
     const [advertisejobs, setAdvertiseJobs] = useState({
         cname: "",
         jobtitle: "",
@@ -21,73 +28,133 @@ function Post({ user3 }) {
         posteddate: "",
         description: ""
     });
-     const [result2, setResult2] = useState([]);
+    const [result2, setResult2] = useState([]);
 
     console.log(advertisejobs);
 
-     const handleSubmit = () => {
-    setAdvertiseJobs({
-      cname: "",
-      jobtitle: "",
-      city: "",
-      address: "",
-      jobtype: "",
-      pay: "",
-      lastdate: "",
-      username: user3,
-      posteddate:"",
-      description:""
-    });
-  };
+    const handleSubmit = () => {
+        setAdvertiseJobs({
+            cname: "",
+            jobtitle: "",
+            city: "",
+            address: "",
+            jobtype: "",
+            pay: "",
+            lastdate: "",
+            username: user3,
+            posteddate: "",
+            description: ""
+        });
+    };
 
-  const submitJob = async (e) => {
-    e.preventDefault();
+    const submitJob = async (e) => {
+        e.preventDefault();
 
-    const { cname, jobtitle, city, address, jobtype, pay, lastdate, posteddate, description } = advertisejobs;
+        const { cname, jobtitle, city, address, jobtype, pay, lastdate, posteddate, description } = advertisejobs;
 
-    if (!cname || !jobtitle || !city || !address || !jobtype || !pay || !lastdate || !posteddate || !description) {
-      alert('Please fill in all fields.');
-    } else {
-      const data = {
-        cname,
-        jobtitle,
-        city,
-        address,
-        jobtype,
-        pay,
-        lastdate,
-        username: user3,
-        posteddate,
-        description
-      };
-      console.log(data);
-      const result = await advertiseApi(data);
-      console.log(result);
-       postedJobs(); 
-      alert('Job posted successfully!');
-      handleSubmit();
-    }
-  };
+        if (!cname || !jobtitle || !city || !address || !jobtype || !pay || !lastdate || !posteddate || !description) {
+            alert('Please fill in all fields.');
+        } else {
+            const data = {
+                cname,
+                jobtitle,
+                city,
+                address,
+                jobtype,
+                pay,
+                lastdate,
+                username: user3,
+                posteddate,
+                description
+            };
+            console.log(data);
+            const result = await advertiseApi(data);
+            console.log(result);
+            postedJobs();
+            alert('Job posted successfully!');
+            handleSubmit();
+        }
+    };
 
     const postedJobs = async () => {
-    const result1 = await postedApi();
-    const result4 = result1.data.filter(usr => usr.username === user3);
-    setResult2(result4);
-  };
+        const result1 = await postedApi();
+        const result4 = result1.data.filter(usr => usr.username === user3);
+        setResult2(result4);
+    };
+
+
+
+    const deletejob = async (id) => {
+        const result5 = await deletejobApi(id);
+        console.log(result5);
+        postedJobs();
+    };
+
+
+    const getclickId = (id) => {
+        console.log(id);
+        setClickId(id);
+    };
+
+
+    /*   const jobresponse = async (jobId) => {
+          const result = await showappliedApi()
+          console.log(result);
+          const result1 = result.data.filter( job => job.id === jobId)
+          console.log(result1);
+         setRes(result1);
+      setShowJ(true);
+   */
+
+
+    /* if (result1.find(flt => flt.id === showid)) {
+
+        console.log(' applied');
+
+        setRes(result1)
+        setShowJ(true)
+    }
+    else if (result1.find(flt => flt.id !== showid)) {
+        console.log('not applied');
+
+        setShowJ(false)
 
 
 
 
+    } */
+    /*   } */
+
+const jobresponse = async (jobId) => {
+  try {
+    const result = await showappliedApi();
+
+    const result1 = result.data.filter((job) => {
+      const appliedJobId = job.jobId ?? job.id;
+
+      return (
+        job.username === user3 &&
+        String(appliedJobId) === String(jobId)
+      );
+    });
+
+    console.log("All applications:", result.data);
+    console.log("Filtered applicants:", result1);
+
+    setRes(result1);
+    setShowJ(true);
+  } catch (error) {
+    console.error("Error fetching applicants:", error);
+  }
+};
 
 
 
 
-  
-    
-
-   useEffect(() => {
-    postedJobs();
-  }, [user3]);
+    useEffect(() => {
+        postedJobs();
+        setShowJ(false);
+    }, [user3]);
 
 
     return (
@@ -103,7 +170,7 @@ function Post({ user3 }) {
                         <div className='border rounded p-4 my-5'>
                             <div className='d-flex align-items-center justify-content-between'>
                                 <h5>Employer</h5>
-                                <a href="" style={{ textDecoration: 'none' }}>Click here to advertise your job<FontAwesomeIcon icon={faCircleArrowRight} /></a>
+                                <p href="" className='text-primary' style={{ textDecoration: 'none' }}>Click here to advertise your job<FontAwesomeIcon icon={faCircleArrowRight} /></p>
                             </div>
                             <h5 className='text-center text-primary'>Posted Jobs</h5>
 
@@ -120,26 +187,36 @@ function Post({ user3 }) {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                       {result2.length > 0 ? (
-                                        result2.map((item) => (<tr>
-                                            <td className='border-end'>2026-11-06</td>
-                                            <td className='border-end'>csa</td>
-                                            <td className='border-end'>Thodupuzha</td>
-                                            <td className='border-end'>full time</td>
-                                            <td className='border-end'>154575</td>
-                                            <td className='border-end'>
-                                                <div className='d-flex align-items-center justify-content-between'>
-                                                    <button className='btn btn-danger rounded'>Delete</button>
-                                                    <button className='btn btn-primary rounded'>Response</button>
+                                        {result2.length > 0 ? (
+                                            result2.map((item) => (<tr key={item.id}>
+                                                <td className='border-end'>{item.posteddate}</td>
+                                                <td className='border-end'>{item.jobtitle}</td>
+                                                <td className='border-end'>{item.city}</td>
+                                                <td className='border-end'>{item.jobtype}</td>
+                                                <td className='border-end'>{item.pay}</td>
+                                                <td className='border-end'>
+                                                    <div className='d-flex align-items-center justify-content-between'>
+                                                        <button className='btn btn-danger rounded' onClick={() => { deletejob(item.id), setShowJ(false) }}>Delete</button>
+                                                        {/* <button onClick={() => { setModalShow(true); getclickId(item.id), jobresponse(item.id); }} className='btn btn-primary rounded'>Response</button> */}
+                                                        <button
+                                                            onClick={() => {
+                                                                setModalShow(true);
+                                                                getclickId(item.id);
+                                                                jobresponse(item.id);
+                                                            }}
+                                                            className="btn btn-primary"
+                                                        >
+                                                            Response
+                                                        </button>
 
-                                                </div>
-                                            </td>
-                                        </tr>)))
-                                        :(
-                                            <tr>
-                                            <td colSpan="6" className='text-center'>No jobs posted</td>
-                                            </tr>
-                                        )}
+                                                    </div>
+                                                </td>
+                                            </tr>)))
+                                            : (
+                                                <tr>
+                                                    <td colSpan="6" className='text-center'>No jobs posted</td>
+                                                </tr>
+                                            )}
                                     </tbody>
                                 </table>
                             </div>
@@ -210,6 +287,41 @@ function Post({ user3 }) {
 
 
             </div>
+
+            <Modal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                        Details of jobseekers applied for this job
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <div className="row">
+                        <div className="col-md-4">Name:</div>
+                        <div className="col-md-4">Email:</div>
+                        <div className="col-md-4">Phone:</div>
+                    </div>
+                    {showj && (<div>
+                        {res?.map((item) => (<div key={item.id} className="row">
+                            <div className="col-md-4">{item.name}</div>
+                            <div className="col-md-4">{item.email}</div>
+                            <div className="col-md-4">{item.phone}</div>
+                        </div>))
+
+                        }
+
+                    </div>)}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button onClick={() => setModalShow(false)}>Close</Button>
+                </Modal.Footer>
+            </Modal>
+
         </>
     )
 }
